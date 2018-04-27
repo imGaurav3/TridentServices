@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trident Services</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
+      .navbar,navbar-default
+      {
+          background-color: #9b111e;
+          max-width: 100%;
+          height: auto;
+      }
+      .img-responsive
+      {
+        display: block;
+        max-width: 100%;
+        height: 45px;
+      }
+      .topnav.responsive
+      {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .modal-content{
+			background-color: lightgrey;
+		}
+		.btn-link{
+			color: sblue;
+		}
+		.modal-heading
+    {
+			color: black;
+		}
+    .form-group
+    {
+      padding-bottom: 20px;
+    }
+    .modal-dialog
+    {
+      margin-top: 200px;
+    }
+    .form-control
+    {
+      height: 60px;
+    }
+    .form-group,text-center
+    {
+      font-size: 50px;
+    }
+    .a
+    {
+      padding-bottom: 20px;
+    }
+    .active
+    {
+      background-color: green;
+    }
+    .nav
+    {
+        padding-top: 12px;
+        font-size: 25px;
+    }
+    .button
+    {
+      text-align: center;
+      float: none;
+    }
+    .mainNavBar
+    {
+      text-align: center;
+      background-color: black;
+    }
+    </style>
+</head>
+  <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <img class="img-responsive" src="http://www.tridentservices.co.in/img/logo.png">
+            </a>
+        </div>
+        <div class="navbar-header">
+         <button type="button" class="navbar-toggle navbar-center" data-toggle="collapse" data-target="#mainNavBar">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </button>
+       </div>
+          <div class="navbar-header navbar-right collapse navbar-collapse" id="mainNavBar">
+          <ul class="nav navbar-nav navbar-right">
+           <li><a href="http://127.0.0.1:3000/Source/index.html"><span class="glyphicon glyphicon-user"></span> User</a></li>
+           <li><a class="active" href="http://127.0.0.1:3000/Source/adminlogin.html"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-heading">
+				<h2 class="text-center">Login</h2>
+			</div>
+			<div class="modal-body">
+				<form action="" role="form">
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-user"></span>
+							</span>
+							<input type="text" class="form-control" placeholder="User Name" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-lock"></span>
+							</span>
+							<input type="password" class="form-control" placeholder="Password" />
+
+						</div>
+
+					</div>
+
+					<div class="form-group text-center">
+						<button type="submit" class="btn btn-success btn-lg">Login</button>
+						<a href="#" class="btn btn-link">Forgot Password?</a>
+					</div>
+          <div class="a form-group text-center">
+						<h3>Not Registered?
+						<a href="#" class="btn btn-link">Create an account</a>
+          </h3>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>
