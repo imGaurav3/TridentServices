@@ -141,16 +141,16 @@
   }
   .loc
   {
-    border-color: #026a84;
+    border-color: #042B4D;
   }
   .map
   {
-    background-color: #026a84;
-    border-color: #026a84;
+    background-color: #042B4D;
+    border-color: #042B4D;
   }
   .cont2
   {
-    background-color: #026a84;
+    background-color: #042B4D;
     width: 100%;
   }
     </style>
@@ -181,7 +181,7 @@
     <div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-heading">
-				<h2 class="text-center">Registeration Form</h2>
+				<h2 class="text-center">Registration Form</h2>
 			</div>
 			<div class="modal-body">
         <form action="" method="post" id="fileForm" role="form">
@@ -193,7 +193,7 @@
 
                <div class="form-group">
                    <label for="firstname"><span class="req">* </span>Name: </label>
-                       <input class="form-control" type="text" name="firstname" id = "txt" placeholder="Name "onkeyup = "Validate(this)" required />
+                       <input class="form-control" type="text" name="firstname" id = "txt" placeholder="Name "onkeyup = "Validate_name(this)" required />
                            <div id="errFirst"></div>
                </div>
 
@@ -241,7 +241,7 @@
                </div>
 
                <div class="form-group">
-                   <input class="btn btn-success" type="submit" name="submit_reg" value="Register">
+                   <a href="http://127.0.0.1:3000/Source/" class="btn btn-success" role="button">Register</a>
                </div>
                          <h5>You will receive an email to complete the registration and validation process. </h5>
                          <h5>Be sure to check your spam folders. </h5>
@@ -297,6 +297,9 @@
     }
     // validates text only
     function Validate(txt) {
+        txt.value = txt.value.replace(/[^a-zA-Z-'\n\r.0-9]+/g, '');
+    }
+    function Validate_name(txt) {
         txt.value = txt.value.replace(/[^a-zA-Z-'\n\r.]+/g, '');
     }
     // validate email
