@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trident Services</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
+      .navbar,navbar-default
+      {
+          background-color: #9b111e;
+          max-width: 100%;
+          height: auto;
+      }
+      .img-responsive
+      {
+        display: block;
+        max-width: 100%;
+        height: 45px;
+      }
+      .topnav.responsive
+      {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    .modal-content
+    {
+			background-color: lightgrey;
+		}
+		.btn-link{
+			color: sblue;
+		}
+		.modal-heading
+    {
+			color: black;
+		}
+    .form-group
+    {
+      padding-bottom: 20px;
+    }
+    .modal-dialog
+    {
+      margin-top: 150px;
+      width: 900px;
+    }
+    .form-control
+    {
+      height: 60px;
+    }
+    .form-group,text-center
+    {
+      font-size: 20px;
+    }
+    .a
+    {
+      padding-bottom: 20px;
+    }
+    .active
+    {
+      background-color: green;
+    }
+    .nav
+    {
+        padding-top: 12px;
+        font-size: 25px;
+    }
+    .fieldset
+    {
+      border: thin solid #ccc;
+      border-radius: 4px;
+      padding: 20px;
+      padding-left: 40px;
+      background: #fbfbfb;
+    }
+    .button
+    {
+      text-align: center;
+      float: none;
+    }
+    .mainNavBar
+    {
+      text-align: center;
+      background-color: black;
+    }
+    .legend
+    {
+      color: #678;
+    }
+  .form-control
+  {
+      width: 95%;
+  }
+  .label small
+  {
+    color: #678
+  }
+  span.req
+  {
+    color:maroon;
+    font-size: 112%;
+  }
+  .panel
+  {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .cont1
+  {
+      background-color: #e8e8e8;
+      width: 100%;
+      padding-bottom: 20px;
+      margin-top: 120px;
+  }
+  .h31
+  {
+    color: white;
+  }
+  .h51
+  {
+    color: #28aac9;
+    padding-left: 10px
+  }
+  .footer1
+  {
+
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: red;
+      color: white;
+      text-align: center;
+  }
+  .largeicons
+  {
+      font-size: 80px;
+      color: #9b111e;
+  }
+  .loc
+  {
+    border-color: #042B4D;
+  }
+
+  .map
+  {
+    background-color: #042B4D;
+    border-color: #042B4D;
+  }
+  .map1
+  {
+    margin-top: 50px;
+    background-color: #e8e8e8;
+    border-color: #e8e8e8;
+  }
+  .loc1
+  {
+    border-color: #e8e8e8;
+    background-color: #e8e8e8;
+  }
+  .cont2
+  {
+    background-color: #042B4D;
+    width: 100%;
+  }
+  .cont3
+  {
+    background-color: #e8e8e8;
+    margin-top: 150px;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+    </style>
+</head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <img class="img-responsive" src="http://www.tridentservices.co.in/img/logo.png">
+            </a>
+        </div>
+        <div class="navbar-header">
+         <button type="button" class="navbar-toggle navbar-center" data-toggle="collapse" data-target="#mainNavBar">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </button>
+       </div>
+          <div class="navbar-header navbar-right collapse navbar-collapse" id="mainNavBar">
+          <ul class="nav navbar-nav navbar-right">
+           <li><a href="http://127.0.0.1:3000/Source/index.html"><span class="glyphicon glyphicon-user"></span> User</a></li>
+           <li><a class="active" href="http://127.0.0.1:3000/Source/adminlogin.html"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <script>
+        var genid = localStorage.getItem("gen_id");
+    </script>
+    <div class="container main cont3">
+        <div class="row row-responsive">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="panel panel-primary loc1">
+                  <p><strong><h1><script>document.write(genid);</script></h1></strong>
+                  <p><h3>Generator Model : model no</h3></p>
+                  <p><h3>Customer Name : name</h3></p>
+                  <p><h3>Contact No : no</h3></p>
+                  <p><h3>Email-ID : email</h3></p>
+                  <p><h3>Address : address</h3></p>
+              </div>
+            </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="panel panel-primary map1">
+              <p><strong><h3>Location</h3></strong></p>
+              <div id="map" style="width:100%;height:250px"></div>
+              <script>
+              function myMap() {
+                var latitude = 18.507331;   //take from server
+                var longitude = 73.810201;  //take from server
+                var myCenter = new google.maps.LatLng(latitude,longitude);
+                var mapCanvas = document.getElementById("map");
+                var mapOptions = {center: myCenter, zoom: 17};
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+                var marker = new google.maps.Marker({position:myCenter});
+                marker.setMap(map);
+
+                // Zoom to 9 when clicking on marker
+                google.maps.event.addListener(marker,'click',function() {
+                  map.setZoom(9);
+                  map.setCenter(marker.getPosition());
+                });
+              }
+              </script>
+
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiIx-Fd-c4j3igb61md_ZbXp1mdCj4rSs&callback=myMap"></script>
+              </div>
+            </div>
+            </div>
+          </div>
+    <div class = "footer1">
+      <h2 class="toll">CALL: (Toll-Free)<span class="glyphicon glyphicon-phone-alt"></span> 18002333222<h2>
+    </div>
+    <div class="container main cont2">
+        <div class="row row-responsive">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="panel panel-primary map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.9329299826645!2d73.79503194975452!3d18.486696987366997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfd305f68d79%3A0x4c90abb226b7fa7a!2sTrident+Services+Pvt.Ltd.!5e0!3m2!1sen!2sin!4v1497950014781"
+               style="border:0" allowfullscreen="" width="580" height="350" frameborder="0">
+             </iframe>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="panel panel-primary loc">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="icon1">
+                  <br>
+                  <span class="glyphicon glyphicon-map-marker largeicons" >
+                  </span>
+                </div>
+                <br>
+                <br>
+                <div class="icon2">
+                  <span class="glyphicon glyphicon-envelope largeicons" >
+                  </span>
+                </div>
+                <br>
+                <br>
+                <div class="icon3">
+                  <span class="glyphicon glyphicon-earphone largeicons" >
+                  </span>
+                </div>
+              </div>
+                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <div>
+                    <h3 class="h31">
+                        Trident Services Pvt. Ltd.
+                    </h3>
+                    <h5 class="h51">
+                        'Trident House'
+                        <br>
+                        Survey No. 116, Hissa No. 9/6 & 7,
+                        <br>
+                        Mumbai- Banglore Highway, Warje, Pune 411058
+                    </h5>
+                  </div>
+                  <div>
+                    <br>
+                      <h3 class="h31">
+                          E-mail
+                      </h3>
+                      <h5 class="h51">
+                          customercare@tridents.net
+                          <br>
+                           crm@tridents.net
+                      </h5>
+                    </div>
+                    <div>
+                      <br>
+                        <h3 class="h31">
+                            Phone Numbers
+                        </h3>
+                        <h5 class="h51">
+                            +91 20 66266200
+                            <br>
+                             +91 20 66266202 (Fax)
+                             <br>
+                             Call: 18002333222
+                        </h5>
+                      </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</body>
+</html>

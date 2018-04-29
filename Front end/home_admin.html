@@ -139,6 +139,7 @@
       width: 100%;
     }
       </style>
+
     </head>
     <body>
       <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -163,6 +164,7 @@
           </div>
         </div>
       </nav>
+
       <div class="container main cont3">
         <div class="row row-responsive">
           <div class="panel panel-primary">
@@ -171,16 +173,28 @@
       					<div class="form-group">
       						<div class="input-group">
       							<span class="input-group-addon">
-                    <input type="text" class="form-control" name="gen_id" placeholder="Enter Generator ID">
+                    <input type="text" class="form-control" name="gen_id" id = "gen_id" placeholder="Enter Generator ID">
                           <span class="input-group-btn">
-                              <button class="btn btn-default" type="button" onclick="myFunction()">Search</button>
+                            <input type="button" class="btn btn-success"value="Search" onclick="newDoc()">
                           </span>
+                          <script>
+                          function newDoc()
+                          {
+                            var genid = document.getElementById("gen_id").value;
+                            if(true)
+                            {
+                                localStorage.setItem("gen_id",genid);
+                                window.location.assign("http://127.0.0.1:3000/Source/genset.html")
+                            }
+                          }
+                          </script>
                   </div>
       					</div>
               </div>
             </div>
           </div>
         </div>
+
         <div class = "footer1">
           <h2 class="toll">CALL: (Toll-Free)<span class="glyphicon glyphicon-phone-alt"></span> 18002333222<h2>
         </div>
