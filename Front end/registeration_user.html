@@ -30,8 +30,8 @@
     {
 			background-color: lightgrey;
 		}
-		.btn-link{
-			color: sblue;
+		.btn{
+			font-size: 25px;
 		}
 		.modal-heading
     {
@@ -170,18 +170,21 @@
              <span class="icon-bar"></span>
          </button>
        </div>
-          <div class="navbar-header navbar-right collapse navbar-collapse" id="mainNavBar">
-          <ul class="nav navbar-nav navbar-right">
-           <li><a class="active" href="http://127.0.0.1:3000/Source/index.html"><span class="glyphicon glyphicon-user"></span> User</a></li>
-           <li><a href="http://127.0.0.1:3000/Source/adminlogin.html"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
-          </ul>
-        </div>
+       <div class="navbar-header navbar-right collapse navbar-collapse" id="mainNavBar">
+         <ul class="nav navbar-nav navbar-right">
+          <li><a  href="http://127.0.0.1:3000/Source/home_user.html">Home</a></li>
+          <li><a class="active" href="http://127.0.0.1:3000/Source/registeration_user.html">Add Generator</a></li>
+          <li><a href="http://127.0.0.1:3000/Source/about_us.html">About Us</a></li>
+          <li><a href="http://127.0.0.1:3000/Source/contact_us.html">Contact Us</a></li>
+          <li><a href="http://127.0.0.1:3000/Source/">Log Out</a></li>
+         </ul>
+       </div>
       </div>
     </nav>
     <div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-heading">
-				<h2 class="text-center">Registration Form</h2>
+				<h2 class="text-center">Generator Details</h2>
 			</div>
 			<div class="modal-body">
         <form action="" method="post" id="fileForm" role="form">
@@ -232,19 +235,18 @@
                        <input class="form-control" type="text" name="gen-id" id = "txt" onkeyup = "Validate(this)" placeholder="Generator ID" required />
                            <div id="errLast"></div>
                </div>
-               <div class="form-group">
+               <!-- <div class="form-group">
                    <input type="hidden" value="<?php //echo $date_entered; ?>" name="dateregistered">
                    <input type="hidden" value="0" name="activate" />
                    <hr>
 
                    <input type="checkbox" required name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">   <label for="terms">I agree with the <a href="terms.php" title="You may read our terms and conditions by clicking on this link">terms and conditions</a> for Registration.</label><span class="req">* </span>
-               </div>
+               </div> -->
 
                <div class="form-group">
-                     <a href="http://127.0.0.1:3000/Source/" class="btn btn-success" role="button">Register</a>
+                     <a href="http://127.0.0.1:3000/Source/" class="btn btn-success center-block" role="button">Add</a>
                </div>
-                         <h5>You will receive an email to complete the registration and validation process. </h5>
-                         <h5>Be sure to check your spam folders. </h5>
+
 
 
                </fieldset>
